@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>升级设置</title>
+<link rel="stylesheet" href="{$_G['siteurl']}/source/plugin/zywx/template/css/style.css" type="text/css" />
+
+</head>
+
+<body class="body_bg">
+  <div class="padd">
+        <div class="t-header">           
+            <div  class="html_content" >
+                <b style="float:left; display:block; line-height:50px;">AppCan 手机论坛客户端</b>
+                <div class="title_r">
+                     <a href="{ZYWX_SPREAD}" class="btn1">我要推广</a>
+                    <a href="{$url}&op=applist" class="btn2">管理应用</a>
+					<a href="{$url}&op=publicity" class="btn2">推广设置</a>
+                    <a href="{$url}&op=setappupgrade" class="btn2">升级设置</a>
+                    <a href="{$url}&op=setcontent" class="btn2">内容设置</a>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="clear"></div>       
+       <div style="padding:50px 0px 0px 100px;">
+	   <form action="$url" method="post" enctype="multipart/form-data">
+          <div class="email_input">
+        	<label class="e_label" style="width:120px; margin-right:20px; text-align:right;">iPhone安装包路径</label>
+            <div class="input_b">
+            <input name="iphone_src" type="text" style="width:317px" value="{$_SESSION['iphone_src']}"  class="e_input"/>
+            </div>
+            <div class="clear"></div>
+        </div>
+         <div class="email_input">
+        	<label class="e_label" style="width:120px; margin-right:20px; text-align:right;">Android安装包路径</label>
+            <div class="input_b">
+            <input name="android_src" type="text"  style="width:317px" value="{$_SESSION['android_src']}"  class="e_input"/>
+            </div>
+            <div class="clear"></div>
+        </div>
+         <div class="email_input">
+        	<label class="e_label" style="width:120px; margin-right:20px; text-align:right;">应用版本号</label>
+            <div class="input_b">
+            <input name="app_ver" type="text"  style="width:317px" value="{$_SESSION['app_ver']}"  class="e_input"/>
+            </div>
+            <div class="clear"></div>
+        </div>  
+       <div style="width:700px;"> 
+        <p style="color:#8f8f8f; line-height:25px;"><b>备注：</b></p>
+        <p style="color:#8f8f8f; line-height:25px;">1.此设置是提醒用户手机客户端自动升级到你设置的版本；应用下载页可下载最新安装包。</p> 
+        <p style="color:#8f8f8f; line-height:25px;">2.客户端安装包路径可以是全路径 例：http://www.xxx.com/xxx/iphone.ipa或是包名称 例：iphone.ipa 但是包文件必须放在source\plugin\zywx文件目录下</p> 
+        <p style="color:#8f8f8f; line-height:25px;">3.两个安装包共用一个版本号</p>    
+        <p style="color:#8f8f8f; line-height:25px;">4.填写版本号与最新应用版本号一致</p>  
+        </div> 
+		<input type="hidden" name="formhash" value="<?php echo FORMHASH;?>" />
+        <input name="appupgradesubmit" type="submit" value="提交" class="next_btn" style="border:none; margin:20px 0px 0px 100px;" />
+		</form>
+      </div>
+  </div>
+  
+</body>
+</html>

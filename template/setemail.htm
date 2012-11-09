@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>生成应用</title>
+<link rel="stylesheet" href="{$_G['siteurl']}/source/plugin/zywx/template/css/style.css" type="text/css" />
+</head>
+
+<body class="body_bg"> 
+<div style="padding-top:10px; padding-left:400px;">       
+       <div class=" login_con" style="margin-left:0px;">
+         <div class="dz_login">
+           <div class="login_nav">
+           		<a id="t1" href="javascript:gettab(1);" class="a_active">注册</a>
+                <a id="t2" href="javascript:gettab(2);">AppCan帐号登陆</a>
+                <div class="clear"></div>
+           </div> 
+          </div>
+           <!--注册-->
+           <div id="d1" class="login_box" style="display:">
+			<form name="form1" action="$url" method="post">           
+              <div class="dz_input">
+           		 <div class="login_in">
+                 	<label class="reg_label">邮箱：</label>
+                    <input name="email" type="text" class="reg_input" value=""/>
+                    <div class="clear"></div>
+                 </div>
+                 <div class="login_in">
+                 	<label class="reg_label">帐号：</label>
+                    <input name="username" type="text" class="reg_input"  value=""/>
+                    <div class="clear"></div>
+                 </div>       
+                 <div class="login_in">
+                 	<label class="reg_label">密码：</label>
+                    <input type="password" name="password" type="text" class="reg_input" value="" />
+                    <div class="clear"></div>
+                 </div> 
+                 <div class="login_in">
+                 	<label class="reg_label">确认密码：</label>
+                    <input type="password" name="repassword" type="text" class="reg_input"  value=""/>
+                    <div class="clear"></div>
+                 </div>  
+                </div>   
+                <div class="dz_bz">
+                	<p style="color:#000;"><b>备注：</b></p>
+                    <p>1.请填写您常用邮箱，此邮箱为您管理插件找回密码必填信息</p>
+                    <p>2.确认邮箱页面中，请勿刷新该页，如刷新将导致无法认证成功</p>
+                    <p>3.密码为系统随机分配，密码用于登录AppCan开发平台，为保证您      的账户安全，建议您至官网修改密码，官网地址： </p>
+                    <p>http://www.appcan.cn</p>
+                </div>
+				
+				<input id="emailsubmit" name="emailsubmit" type="submit" class="next_btn" style="margin:10px auto 10px ; display:block;" value="确认注册" />
+				<input type="hidden" name="formhash" value="<?php echo FORMHASH;?>" />
+				</form>
+				
+           </div>
+           <!--注册end-->   
+           <!--登录-->
+           <div id="d2" class="login_box" style="border:0px;display:none" >
+           		<iframe src="http://te.3g2win.com/proxyserver/index.php?m=curl&a=toLogin&callback_uri={eval echo urlencode($url.'&op=login')}"
+ width="385" height="300" frameborder="0" style="margin-left:-3px; background:#F4FAFD" ></iframe>
+                   
+           </div>
+           <!--登录end-->        
+       </div>
+        
+</div>
+
+<script language="javascript">
+//选项卡的个数
+var num=2;
+function gettab(now){
+	
+	for(var i=1;i<=num;i++){
+		if(i==now){
+			document.getElementById("t"+i).className = 'a_active';
+			document.getElementById("d"+i).style.display="block";
+		}else{
+			document.getElementById("t"+i).className = '';
+			document.getElementById("d"+i).style.display="none";
+		}
+	}
+}
+
+var issubmit = false;
+function showwaiting() {
+	if(!issubmit) {
+		$('ajaxwaitid').innerHTML = '<img src="' + IMGDIR + '/loading.gif">';
+		$('emailsubmit').value = "处理中...";
+		issubmit = true;
+		return false;
+	} else {
+		return false;
+	}	
+}
+</script>
+
+</body>
+</html>

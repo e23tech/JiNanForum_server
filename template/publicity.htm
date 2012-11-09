@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>推广设置</title>
+<link rel="stylesheet" href="{$_G['siteurl']}/source/plugin/zywx/template/css/style.css" type="text/css" />
+</head>
+
+<body class="body_bg">
+  <div class="padd">
+        <div class="t-header">
+            <b class="html_b htmer_circle1"></b>
+            <b class="html_b htmer_circle2"></b>
+            <div  class="html_content" >
+                <b style="float:left; display:block; line-height:50px;">AppCan 手机论坛客户端</b>
+                <div class="title_r">
+                    <a href="{ZYWX_SPREAD}" class="btn1">我要推广</a>
+                    <a href="{$url}&op=applist" class="btn2">管理应用</a>
+                    <a href="{$url}&op=publicity" class="btn2">推广设置</a>
+					<a href="{$url}&op=setappupgrade" class="btn2">升级设置</a>
+					<a href="{$url}&op=setcontent" class="btn2">内容设置</a>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <b class="html_b htmer_circle3 "></b>
+            <b class="html_b htmer_circle4"></b>
+        </div>
+        <div class="clear"></div>
+        <div class="nav_bg" >
+            <b>宣传推广</b><span style="color:#717171">（建议生成应用后在设置推广方式，否则用户将无法下载到对应平台安装包）</span>
+       </div>
+	   <form method="post" action="{$url}">
+        <div class="admin_box">     
+          <div class="radio_t">
+          	 <div class="r_title"><b>宣传专题页导航位置</b><span>（选择宣传页导航放置位置，选择后显示顺序为尾端，如需调整显示顺序请在后台进行调整）</span><a href="javascript:showbox('box2')">样式预览</a></div>
+             <div style="margin-top:5px;">
+				<input id="l1" name="linklocation" type="radio" value="1" style="border:0px;" {if $_SESSION['linklocation']==1}checked="checked"{/if}/><label for="l1" >顶部导航</label>
+				<input id="l2" name="linklocation" type="radio" value="2" style="border:0px;" {if $_SESSION['linklocation']==2}checked="checked"{/if} class="radio_yes" /><label for="l2">底部导航</label>
+				<input id="l3" name="linklocation" type="radio" value="0" style="border:0px;" {if $_SESSION['linklocation']==0}checked="checked"{/if} class="radio_yes"/><label for="l3">关闭导航</label>				　　　　　
+             </div>
+          </div> 
+          <div class="radio_t">
+          	 <div class="r_title"><b>开启页头通栏广告</b><span>（选择"是"开启页头通栏广告，如需关闭请卸载插件或选择"否"关闭页头通栏广告）</span><a href="javascript:showbox('box1')">样式预览</a></div>
+             <div style="margin-top:5px;">
+                <input id="l4" name="pullscreen" type="radio" style="border:0px;" value="1" {if $_SESSION['pullscreen']}checked="checked"{/if}/><label for="l4">是</label>
+				<input id="l5" name="pullscreen" type="radio" style="border:0px;" value="0" {if !$_SESSION['pullscreen']}checked="checked"{/if}class="radio_yes"/><label for="l5">否</label>		　　　　　　　　　　
+             </div>
+          </div>
+           <div class="radio_t">
+             <div class="r_title"><b>开启右下角弹窗</b><span>（选择‘是’进入论坛与门户首页时会弹出您生成的手机端安装应用下载提示窗）</span><a href="javascript:showbox('box3')">样式预览</a></div>
+             <div style="margin-top:5px;">
+                <input id="l6" name="ispopwin" type="radio" style="border:0px;" value="1" {if $_SESSION['ispopwin']}checked="checked"{/if}/><label for="l6">是</label>
+				<input id="l7" name="ispopwin" type="radio" style="border:0px;" value="0" {if !$_SESSION['ispopwin']}checked="checked"{/if} class="radio_yes" /><label for="l7">否</label>		　　　
+             </div>
+          </div>  
+          <div class="radio_t">
+             <div class="r_title"><b>首页右下角弹窗口时间间隔</b><span>（单位为“天”，0为不限制）</div>
+             <div class="input_box">
+			 <input type="text" name="popwintime" value="{$_SESSION['popwintime']}" onKeyDown="onlynum()"/>
+			 </div>
+             <div class="clear"></div>
+          </div>
+          <div class="xc_border">
+          	<div class="r_title"><b>宣传专题页面</b><span>（您需开启插件后方可查看宣传页）</span><a href="javascript:showbox('box4')">样式预览</a></div>
+            <div style="float:left; height:25px; line-height:25px; margin-right:10px;">页面地址：{$_G['siteurl']}plugin.php?id=zywx:propagate</div>
+            <a href="#" class="a_btn" style="float:left">复制</a>
+            <div class="clear"></div>
+          </div>
+          <div class="sm_info">
+             <div class="r_title"><b>宣传专题页面</b></div>
+             <p class="p_line">1.请用Dreamweaver 打开 propagate.inc.php修改宣传页面</p>
+             <p class="p_line">2.替换source\plugin\zywx\propagate\images目录下的iphone_bg.png,android_bg.png,symbian_bg.png的图片可以分别修改宣传页中iPhone、Android、Symbian选项卡中的宣传图片</p>
+             <p class="p_line">3.宣传页图片大小是960x460;</p>
+<!--             <p class="p_line">4.修改propagate.inc.php第433、442、451、455行的img标签代码设置手机平台logo</p>
+             <p class="p_line">5.修改propagate.inc.php第167行代码按钮背景图片</p>-->
+             <p class="p_line">4.宣传页中用到的图片在source\plugin\zywx\propagate\images文件夹中</p>
+          </div>
+          <div class="next_box">
+		  <input name="publicitysubmit" type="submit" class="next_btn" value="保存"/>
+		  </div>
+       </div>  
+	   <input type="hidden" name="formhash" value="{FORMHASH}"/>
+	   <input type="hidden" name="referer" value="{$_SERVER['HTTP_REFERER']}"/>
+	   </form> 	
+  </div>  
+
+
+<!--弹出层-->
+<div id="tan" class="tan" style="display:none" onClick="hidebox('box1');hidebox('box2');hidebox('box3');hidebox('box4')"></div>
+<!--宣传专题页导航位置-->
+<div id="box1" class="tan_img_box1" style="display:none">
+    	<img src="{$_G['siteurl']}/source/plugin/zywx/template/images/avter.jpg"  />
+    	<div class="img_exit" onClick="hidebox('box1')"></div>
+</div>
+<!--宣传专题页导航位置end-->
+<!--页头通栏广告-->
+<div id="box2" class="tan_img_box" style="display:none;">   	
+        <img src="{$_G['siteurl']}/source/plugin/zywx/template/images/ding.jpg" />
+ 		<div class="img_exit" onClick="hidebox('box2')"></div>
+</div>
+<!--页头通栏广告end-->
+<!--右下角弹窗-->
+<div id="box3" class="tan_img_box2" style="display:none">
+    	<img src="{$_G['siteurl']}/source/plugin/zywx/template/images/kuang.jpg" />
+  		<div class="img_exit" onClick="hidebox('box3')"></div>
+</div>
+<!--右下角弹窗end-->
+<!--宣传页-->-
+<div id="box4" class="tan_img_box3" style="display:none">
+    	<img src="{$_G['siteurl']}/source/plugin/zywx/template/images/xuan.jpg"/>
+  		<div class="img_exit" onClick="hidebox('box4')"></div>
+</div>
+<!--宣传页end-->
+<script type="text/javascript">
+
+function showbox(id) {
+	$(id).style.display = "";
+	$("tan").style.display = "";
+}
+
+function hidebox(id) {
+	$(id).style.display = "none";
+	$("tan").style.display = "none";
+}
+</script>
+  
+</body>
+</html>

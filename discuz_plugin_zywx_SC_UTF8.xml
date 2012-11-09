@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2]]></item>
+	<item id="Time"><![CDATA[2012-02-15 09:14]]></item>
+	<item id="From"><![CDATA[Discuz! Board (http://127.0.0.4/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[AppCan手机客户端]]></item>
+			<item id="identifier"><![CDATA[zywx]]></item>
+			<item id="description"><![CDATA[AppCan手机论坛客户端是AppCan为Discuz!X2站点提供的一款个性定制iPhone、Android、Symbian手机客户端的产品。]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[zywx/]]></item>
+			<item id="copyright"><![CDATA[AppCan]]></item>
+			<item id="version"><![CDATA[2.3.4]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[zywx]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[main]]></item>
+					<item id="menu"><![CDATA[个性定制]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2]]></item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="emailformat_error"><![CDATA[邮箱格式不正确]]></item>
+				<item id="submit_error"><![CDATA[邮箱提交出现错误，请重试]]></item>
+				<item id="emali_back_error"><![CDATA[邮箱未通过服务器验证，原因:]]></item>
+				<item id="style_setting_succeed"><![CDATA[样式设置成功]]></item>
+				<item id="widget_adv"><![CDATA[手机客户端广告]]></item>
+				<item id="appkey_error"><![CDATA[抱歉，连接远程服务器出错，请于此插件服务商联系。]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="check_email"><![CDATA[首先需要确认邮箱：]]></item>
+				<item id="email"><![CDATA[邮箱]]></item>
+				<item id="email_tip"><![CDATA[请填写您常用邮箱，此邮箱为您管理插件找回密码必填信息。]]></item>
+				<item id="submit"><![CDATA[确认]]></item>
+				<item id="account"><![CDATA[账户]]></item>
+				<item id="account_modify"><![CDATA[账户修改]]></item>
+				<item id="initial_password"><![CDATA[密码]]></item>
+				<item id="update_password"><![CDATA[修改密码]]></item>
+				<item id="publicity"><![CDATA[推广设置]]></item>
+				<item id="zywx"><![CDATA[AppCan手机论坛客户端]]></item>
+				<item id="invite"><![CDATA[邀请管理]]></item>
+				<item id="stylesettings"><![CDATA[风格设置]]></item>
+				<item id="contentsettings"><![CDATA[内容设置]]></item>
+				<item id="buildsettings"><![CDATA[生成设置]]></item>
+				<item id="selecttemplate"><![CDATA[选择模板]]></item>
+				<item id="lemon"><![CDATA[柠檬]]></item>
+				<item id="snowlady"><![CDATA[冰雪佳人]]></item>
+				<item id="next"><![CDATA[下一步]]></item>
+				<item id="previous"><![CDATA[上一步]]></item>
+				<item id="navset"><![CDATA[导航设置]]></item>
+				<item id="showsort"><![CDATA[显示顺序]]></item>
+				<item id="name"><![CDATA[名称]]></item>
+				<item id="index"><![CDATA[首页]]></item>
+				<item id="portal"><![CDATA[门户]]></item>
+				<item id="forum"><![CDATA[论坛]]></item>
+				<item id="home"><![CDATA[家园]]></item>
+				<item id="group"><![CDATA[群组]]></item>
+				<item id="my"><![CDATA[我的]]></item>
+				<item id="hidechannel"><![CDATA[隐藏频道]]></item>
+				<item id="portaltip"><![CDATA[用于隐藏不希望在AppCan手机论坛客户端应用上显示的栏目。门户本身隐藏的栏目不需要再次在这里设置。<br><font color="red">按住 CTRL 选中后进行隐藏（可多选）</font><br>]]></item>
+				<item id="navtip"><![CDATA[用于客户端主页设置，设置完毕后客户端默认主页则为已选择项（该设置目前只针对塞班客户端）。]]></item>
+				<item id="forumtip"><![CDATA[用于隐藏不希望在AppCan手机论坛客户端应用上显示的板块。论坛本身隐藏的板块不需要再次在这里设置。<br><font color="red">按住 CTRL 选中后进行隐藏（可多选）</font><br>]]></item>
+				<item id="hometip"><![CDATA[用于隐藏不希望在您的AppCan手机论坛客户端应用上显示的频道（该设置目前只针对塞班客户端）。<br>按住 CTRL 多选<br>]]></item>
+				<item id="dynamic"><![CDATA[动态]]></item>
+				<item id="blog"><![CDATA[日志]]></item>
+				<item id="album"><![CDATA[相册]]></item>
+				<item id="record"><![CDATA[记录]]></item>
+				<item id="share"><![CDATA[分享]]></item>
+				<item id="friend"><![CDATA[好友]]></item>
+				<item id="ptplcachetime"><![CDATA[风格缓存时间：]]></item>
+				<item id="listcachetime"><![CDATA[客户端列表页缓存时间：]]></item>
+				<item id="popwintime"><![CDATA[首页右下角弹窗口时间间隔：]]></item>
+				<item id="popwintime_tip"><![CDATA[单位为：天，0 为不限制。]]></item>
+				<item id="developing"><![CDATA[开发中]]></item>
+				<item id="appmanagement"><![CDATA[ 管理应用]]></item>
+				<item id="handle"><![CDATA[ 正在处理]]></item>
+				<item id="account_tip"><![CDATA[ 系统自动分配账户与密码用于登录AppCan开发平台，为保证您的账户安全，建议您至官网修改密码，官网地址： http://www.appcan.cn。]]></item>
+				<item id="pwdisnull"><![CDATA[ 新密码不能为空]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+		<item id="checkfile"><![CDATA[check.php]]></item>
+	</item>
+</root>

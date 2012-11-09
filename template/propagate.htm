@@ -1,0 +1,220 @@
+<style type="text/css">
+@charset "utf-8";
+/* CSS Document */
+
+body,p,div,ul,ol,li,dl,dt,dd,span,var,em,a,img,strong,table,td,tr,h2,h3,h4,h5,input{margin:0;padding:0;}
+a,img{border:none;}
+body,html{ width:100%; height:100%;}
+ul,ol{list-style-type:none;}
+.clear{height:0px;clear:both; font-size:0px;}
+a{text-decoration:none;}
+var,em,i{font-style:normal;font-weight:noraml;}
+.dz_xc { width:960px; margin:0px auto 0px; padding-top:10px;}
+.dz_nav { padding-left:17px;}
+.dz_nav_bg { display:block; font-family:微软雅黑;float:left; width:105px; height:48px; background:url(source/plugin/zywx/propagate/images//dz_nav.png) no-repeat; text-align:center; line-height:48px; font-size:18px; color:#797979; margin-right:24px;}
+.dz_nav_hov { background:url(source/plugin/zywx/propagate/images//dz_nav_hov.png) no-repeat; color:#175469;}
+.dz_box { width:960px; height:460px;_margin-top:-3px;}
+.dz_iphone {width:960px; height:460px; background:url(source/plugin/zywx/propagate/images//iphone_bg.png) no-repeat; }
+.dz_android {width:960px; height:460px; background:url(source/plugin/zywx/propagate/images//android_bg.png) no-repeat; }
+.dz_symbian {width:960px; height:460px; background:url(source/plugin/zywx/propagate/images//symbian_bg.png) no-repeat; }
+.dz_btn_box { width:180px; height:60px; display:block;  padding:253px 0px 0px 703px;}
+.dz_btn{ width:110px; height:60px; display:block; color:#FFF; font-size:18px; line-height:60px; padding-left:70px; cursor:pointer;}
+.dz_copy{ padding-right:20px; text-align:right; height:20px; line-height:20px;}
+.dz_tan_bg { background:rgba(0,0,0,.6); height:300px;filter:alpha(opacity=60);*background:#000; position:absolute; top:0px; left:0px; width:100%; height:100%;}
+.dz_hide { display:none;}
+.dz_tan_box {  width:590px;  position:absolute; top:100px; left:32%; z-index:99; }
+.dz_tan_nav { width:590px; height:30px;}
+.dz_n_l { width:14px; height:30px; background:url(source/plugin/zywx/propagate/images//dz_l.png) no-repeat; font-size:0px; float:left;
+_background:none;
+_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale,src='source/plugin/zywx/propagate/images//dz_l.png', no-repeat);
+}
+.dz_n_r { width:5px; height:30px; background:url(source/plugin/zywx/propagate/images//dz_r.png) no-repeat; font-size:0px; float:left;
+_background:none;
+_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale,src='source/plugin/zywx/propagate/images//dz_r.png', no-repeat);
+}
+.dz_n_m { width:571px; height:30px; background:url(source/plugin/zywx/propagate/images//dz_m.png) repeat-x;  float:left;}
+.dz_tan_b { width:590px; height:4px;background:url(source/plugin/zywx/propagate/images//tan_b.png) no-repeat; font-size:0px;
+_background:none;
+_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale,src='source/plugin/zywx/propagate/images//tan_b.png', no-repeat);
+}
+.dz_title { color:#FFF; font-size:14px; float:left; line-height:30px; font-weight:bold;}
+.dz_exit { background:url(source/plugin/zywx/propagate/images//dz_exit.png) no-repeat; width:18px; height:29px; float:right; display:block; font-size:0px;}
+.dz_tan_cont{ padding:30px 30px 20px 30px; background:#CEE5F6; _margin-top:-6px; width:530px;}
+.zy_tilte { font-size:14px; font-weight:bold; color:#000; line-height:25px;}
+.zy_left{ float:left;width:340px; margin-right:20px;}
+.zy_right { float:left; width:170px;}
+.dz_img_bg { width:100px; height:100px; background:url(source/plugin/zywx/propagate/images//img_bg.png) no-repeat; padding:24px 23px 24px 23px;
+_background:none;
+_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale,src='source/plugin/zywx/propagate/images//img_bg.png', no-repeat);
+}
+.dz_img_bg img { width:100px; height:100px; }
+.zy_line { width:290px; line-height:18px; color:#000;}
+.zy_down_btn { width:182px; height:78px;background:url(source/plugin/zywx/propagate/images//down_btn.png) no-repeat; display:block; margin:20px auto 0px; cursor:pointer; }
+</style>
+</head>
+
+<body >
+    <div class="dz_xc">
+    	 <div class="dz_nav">
+         	<a id="t1" href="javascript:gettab(1);" class="dz_nav_bg dz_nav_hov">iPhone</a>
+            <a id="t2" href="javascript:gettab(2);" class="dz_nav_bg">Android</a>
+            <a id="t3" href="javascript:gettab(3);" class="dz_nav_bg">Symbian</a>
+            <div class="clear"></div>
+         </div>
+         <!--iphone选项卡-->
+         <div id="d1" class="dz_box">
+                <div class="dz_iphone">
+                    <div class="dz_btn_box">
+                        <a href="javascript:display('iphonediv');display('mb');" class="dz_btn">点击下载</a>
+                    </div>
+                </div>
+         </div>
+          <!--android选项卡-->
+         <div id="d2" class="dz_box dz_hide">
+                <div class="dz_android">
+                	<div class="dz_btn_box">
+                        <a href="javascript:display('androiddiv');display('mb');" class="dz_btn">点击下载</a>
+                    </div>
+                </div>
+         </div>
+          <!--symbian选项卡-->
+         <div id="d3" class="dz_box dz_hide">
+                <div class="dz_symbian">
+                	<div class="dz_btn_box">
+                        <a href="javascript:display('symbiandiv');display('mb');" class="dz_btn">点击下载</a>
+                    </div>
+                </div>
+         </div>
+         <!--symbian选项卡end-->
+         <div class="dz_copy"><a href="http://discuz.appcan.cn" style="color:#000" target="_blank">Powered by AppCan</a></div>
+    </div>
+<div id="mb" class="dz_tan_bg" style="display:none"></div>
+<!--iphone弹出框-->
+<div id="iphonediv" class="dz_tan_box" style="display:none">
+           <div class="dz_tan_nav">
+           		<div class="dz_n_l"></div>
+                <div class="dz_n_m">
+                	<div class="dz_title">IPhone版下载</div>
+                    <a href="javascript:display('iphonediv');display('mb');" class="dz_exit"></a>
+                    <div class="clear"></div>
+                </div>
+                <div class="dz_n_r"></div>
+                <div class="clear"></div>
+           </div>
+           <div class="dz_tan_cont">
+               <div class="zy_left">
+           		  <div class="zy_tilte">1. 手机上网安装</div>
+                  <div class="zy_line">使用您手机上的条形码扫描程序扫描右侧的二维码，即可安装下载；</div>
+                  
+                  <div class="zy_line" style="margin-top:15px;">您还可以登录WAP网址进行下载：</div>
+                  <a class="zy_line" href="$downloadurl" target="_blank">$downloadurl</a>
+                  
+                  <div class="zy_tilte" style="margin-top:50px;">2. 电脑同步安装</div>
+                  <div class="zy_line">下载应用后，使用手机助手或同步推（如未安装同步推将无法安装）一键安装：（必须越狱以后才能安装） </div>                              
+               </div>
+               <div class="zy_right">
+                   <div class="dz_img_bg">
+                     <img src="$iphone_thumbsrc" width="100" height="100" />
+                   </div>
+               </div>
+               <div class="clear"></div>
+                <a href="plugin.php?id=zywx:propagate&download=1&os=iPhone" class="zy_down_btn"></a>
+           </div>
+           <div class="dz_tan_b"></div>
+    </div>
+  <!--iphone弹出框end-->
+  
+ <!--android弹出框-->
+<div id="androiddiv" class="dz_tan_box" style="display:none">
+           <div class="dz_tan_nav ">
+           		<div class="dz_n_l"></div>
+                <div class="dz_n_m">
+                	<div class="dz_title">android版下载</div>
+                    <a href="javascript:display('androiddiv');display('mb');" class="dz_exit"></a>
+                    <div class="clear"></div>
+                </div>
+                <div class="dz_n_r"></div>
+                <div class="clear"></div>
+           </div>
+           <div class="dz_tan_cont">
+               <div class="zy_left">
+           		  <div class="zy_tilte">1. 手机上网安装</div>
+                  <div class="zy_line">使用您手机上的条形码扫描程序扫描右侧的二维码，即可安装下载；</div>
+                  
+                  <div class="zy_line" style="margin-top:15px;">您还可以登录WAP网址进行下载：</div>
+                  <a class="zy_line" href="$downloadurl" target="_blank">$downloadurl</a>
+                  
+                  <div class="zy_tilte" style="margin-top:50px;">2. 电脑同步安装</div>
+                  <div class="zy_line">下载应用后，使用手机助手一键安装：</div>                                 
+               </div>
+               <div class="zy_right">
+                   <div class="dz_img_bg">
+                     <img src="$android_thumbsrc" width="100" height="100" />
+                   </div>
+               </div>
+               <div class="clear"></div>
+                <a href="plugin.php?id=zywx:propagate&download=1&os=Android" class="zy_down_btn"></a>
+           </div>
+           <div class="dz_tan_b"></div>
+    </div>
+  <!--android弹出框end-->
+  
+   <!--symbian弹出框-->
+<div id="symbiandiv" class="dz_tan_box" style="display:none">
+           <div class="dz_tan_nav">
+           		<div class="dz_n_l"></div>
+                <div class="dz_n_m">
+                	<div class="dz_title">symbian版下载</div>
+                    <a href="javascript:display('symbiandiv');display('mb');" class="dz_exit"></a>
+                    <div class="clear"></div>
+                </div>
+                <div class="dz_n_r"></div>
+                <div class="clear"></div>
+           </div>
+           <div class="dz_tan_cont">
+               <div class="zy_left">
+           		  <div class="zy_tilte">1. 手机上网安装</div>
+                  <div class="zy_line">使用您手机上的条形码扫描程序扫描右侧的二维码，即可安装下载；</div>
+                  
+                  <div class="zy_line" style="margin-top:15px;">您还可以登录WAP网址进行下载：</div>
+                  <a class="zy_line" href="$downloadurl" target="_blank">$downloadurl</a>
+                  
+                  <div class="zy_tilte" style="margin-top:50px;">2. 电脑同步安装</div>
+                  <div class="zy_line">下载应用后，使用手机助手一键安装：</div>                                 
+               </div>
+               <div class="zy_right">
+                   <div class="dz_img_bg">
+                     <img src="$thumbsrc" width="100" height="100" />
+                   </div>
+               </div>
+               <div class="clear"></div>
+                <a href="plugin.php?id=zywx:propagate&download=1&os=Symbianv3" class="zy_down_btn"></a>
+           </div>
+           <div class="dz_tan_b"></div>
+    </div>
+  <!--symbian弹出框end-->
+
+
+<script language="javascript">
+//选项卡的个数
+var num=3;
+function gettab(now){
+	
+	document.getElementById("iphonediv").style.display = "none";
+	document.getElementById("androiddiv").style.display = "none";
+	document.getElementById("symbiandiv").style.display = "none";
+	
+	for(var i=1;i<=num;i++){
+		if(i==now){
+			document.getElementById("t"+i).className = 'dz_nav_bg dz_nav_hov';
+			document.getElementById("d"+i).style.display="block";
+		}else{
+			document.getElementById("t"+i).className = 'dz_nav_bg';
+			document.getElementById("d"+i).style.display="none";
+		}
+	}
+}
+</script>  
+
+</body>
+</html>

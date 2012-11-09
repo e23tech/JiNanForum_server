@@ -1,0 +1,328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>内容设置</title>
+<link rel="stylesheet" href="{$_G['siteurl']}/source/plugin/zywx/template/css/style.css" type="text/css" />
+
+</head>
+
+<body class="body_bg" style="min-width:1100px;_width:1100px">
+<form action="$url" method="post" enctype="multipart/form-data" onsubmit="return showwaiting();">
+  <div class="padd">
+        <div class="t-header">
+           
+            <div  class="html_content" >
+                <b style="float:left; display:block; line-height:50px;">AppCan手机论坛客户端</b>
+                <div class="title_r">
+                    <a href="{ZYWX_SPREAD}" class="btn1">我要推广</a>
+                    <a href="{$url}&op=applist" class="btn2">管理应用</a>
+                    <a href="{$url}&op=publicity" class="btn2">推广设置</a>
+                    <a href="{$url}&op=setappupgrade" class="btn2">升级设置</a>
+                    <a href="{$url}&op=setcontent" class="btn2">内容设置</a>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+           
+        </div>
+        <div class="clear"></div>
+
+  </div>
+  <div style="color:red; margin-left:30px;margin-bottom:20px;">温馨提示：内容设置可以随时设置，不需要重新生成打包。</div>
+
+  <div class="nav_bg"><b>绑定微博appkey</b><span style="color:#717171">（请输入有效的appkey如检测未生效则使用默认key）</span></div>
+  
+
+  
+  <div style="float:left; width:420px;">
+  <div class="text_box" style="text-align:center; font-weight:bold; color:#000; font-size:14px;">腾讯 </div> 
+ 
+  <div class="text_box">
+  	<label class="label_box"> app key</label>
+    <div class="input_box"><input name="weibo_tencent" type="text"  value="$_SESSION['weibo_tencent']"/></div>
+   
+    <div class="clear"></div>
+  </div>  
+   <div class="ts_box hide">回调页为微博授权成功或失败返回的链接页面，请与在新浪申请key时设置的应用回调页保持一致，否则将导致失败</div>
+  <div class="text_box">
+  	<label class="label_box">应用回调页</label>
+    <div class="input_box"><input name="weibo_tencent_callback" type="text"  value="$_SESSION['weibo_tencent_callback']"/></div>  
+    <div class="clear"></div><br/><a href="http://dev.open.t.qq.com/" target="_blank" style="color:#8f8f8f;">申请地址：http://dev.open.t.qq.com/</a>    
+  </div> 
+   <div class="ts_box hide">回调页为微博授权成功或失败返回的链接页面，请与在新浪申请key时设置的应用回调页保持一致，否则将导致失败</div>
+  </div>
+  
+    <div style="float:left; width:420px;">
+  <div class="text_box" style="text-align:center; font-weight:bold; color:#000; font-size:14px;">新浪</div>    
+  <div class="text_box">
+  	<label class="label_box"> app key</label>
+    <div class="input_box"><input name="weibo_sina" type="text"  value="$_SESSION['weibo_sina']"/></div>  
+    <div class="clear"></div>
+  </div>  
+  <div class="ts_box hide">回调页为微博授权成功或失败返回的链接页面，请与在新浪申请key时设置的应用回调页保持一致，否则将导致失败</div>
+  <div class="text_box">
+  	<label class="label_box">应用回调页</label>
+    <div class="input_box"><input name="weibo_sina_callback" type="text"  value="$_SESSION['weibo_sina_callback']"/></div>
+    <div class="clear"></div>  <br/><a href="http://open.weibo.com/" target="_blank" style="color:#8f8f8f;">申请地址：http://open.weibo.com/</a>
+  </div> 
+    <div class="ts_box hide">回调页为微博授权成功或失败返回的链接页面，请与在新浪申请key时设置的应用回调页保持一致，否则将导致失败</div>
+  </div>
+  
+  <div class="clear"></div>
+    <div style="margin:10px 0px 0px 44px; display:block; color:#f00; line-height:20px;">(腾讯微博和新浪微博的应用回调页填写一致)</div>
+   <div style="margin:5px 0px 0px 44px; display:block; color:#8f8f8f; line-height:20px;">
+   <a href="http://v.youku.com/v_show/id_XMzczMTMxNzQ0.html" target="_blank" style="color:#8f8f8f;">http://v.youku.com/v_show/id_XMzczMTMxNzQ0.html  appcan新浪微博应用回调页</a>  
+   </div>
+   <div class="nav_bg nav_top"><b>门户栏目</b></div>
+   <div class="radio_t" style="padding-left:30px;">
+          	 <div class="r_title">是否开启门户：<span></span></div>
+             <div style="margin-top:5px;">
+                <input id="p5" name="portalstatus" type="radio" style="border:none;" value="1" {if $_SESSION['portalstatus']}checked="checked"{/if}/> <label for="p5">是</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input id="p6" name="portalstatus" type="radio" style="border:none;" value="0" {if !$_SESSION['portalstatus']}checked="checked"{/if}/> <label for="p6">否</label>　　　　
+             </div>
+  </div> 
+  <div class="nav_bg nav_top"><b>首页图片栏</b><span style="color:#717171">（图片大小：640*320，格式只能是gif、jpeg、png）</span></div>
+  
+   <div class="radio_t" style="padding-left:30px;">
+          	 <div class="r_title">开启首页图片栏<span>（选择"是"开启首页图片栏，如需关闭请卸载插件或选择"否"关闭首页图片栏）</span></div>
+             <div style="margin-top:5px;">
+                <input id="p1" name="index_pic_status" type="radio" style="border:none;" value="1" {if $_SESSION['index_pic_status']}checked="checked"{/if}/> <label for="p1">是</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input id="p2" name="index_pic_status" type="radio" style="border:none;" value="0" {if !$_SESSION['index_pic_status']}checked="checked"{/if}/> <label for="p2">否</label>　　　　
+             </div>
+  </div> 
+  
+   <div class="banner_box" style="width:340px; margin-left:0px; float:left;padding-left:20px;">
+    <div class="banner_h">
+    	<div class="banner_bg">
+		<!--{if $_SESSION['index_pic1']}--><img src="$_SESSION['index_pic1']" width="216" height="65"/><!--{/if}-->
+		</div>
+    </div>
+    <div class="banner_btn">
+         <div class="up_img" style="margin-top:20px; margin-left:90px; margin-bottom:5px;">
+          	<a href="#" class="a_btn">上传图片</a>
+             <input name="index_pic1" type="file" class="file_box" />
+          </div>
+		
+    </div>
+    <div class="clear"></div>
+    <div class="text_box">
+  	<label class="label_box" style="width:162px;"><b>首页帖子标题</b>（16字以内）</label>
+    <div class="input_box"><input name="index_pic1_subject" type="text"  value="$_SESSION['index_pic1_subject']"/></div>
+    <div class="clear"></div>
+    </div>
+   <div class="text_box">
+  	<label class="label_box" style="width:162px;"><b>帖子ID</b></label>
+    <div class="input_box"><input name="index_pic1_url" type="text"  value="$_SESSION['index_pic1_url']"/></div>
+    <div class="clear"></div>
+  </div>
+  </div>
+   <div class="banner_box" style="width:340px; margin-left:0px; float:left;">
+    <div class="banner_h">
+    	<div class="banner_bg">
+		<!--{if $_SESSION['index_pic2']}--><img src="$_SESSION['index_pic2']" width="216" height="65"/><!--{/if}-->
+		</div>
+    </div>
+    <div class="banner_btn">
+         <div class="up_img" style="margin-top:20px; margin-left:90px; margin-bottom:5px;">
+          	<a href="#" class="a_btn">上传图片</a>
+             <input name="index_pic2" type="file" class="file_box" />
+          </div>
+		
+    </div>
+    <div class="clear"></div>
+    <div class="text_box">
+  	<label class="label_box" style="width:162px;"><b>首页帖子标题</b>（16字以内）</label>
+    <div class="input_box"><input name="index_pic2_subject" type="text"  value="$_SESSION['index_pic2_subject']"/></div>
+    <div class="clear"></div>
+    </div>
+   <div class="text_box">
+  	<label class="label_box" style="width:162px;"><b>帖子ID</b></label>
+    <div class="input_box"><input name="index_pic2_url" type="text"  value="$_SESSION['index_pic2_url']"/></div>
+    <div class="clear"></div>
+  </div>
+  </div>
+   <div class="banner_box" style="width:340px; margin-left:0px; float:left;">
+    <div class="banner_h">
+    	<div class="banner_bg">
+		<!--{if $_SESSION['index_pic3']}--><img src="$_SESSION['index_pic3']" width="216" height="65"/><!--{/if}-->
+		</div>
+    </div>
+    <div class="banner_btn">
+         <div class="up_img" style="margin-top:20px; margin-left:90px; margin-bottom:5px;">
+          	<a href="#" class="a_btn">上传图片</a>
+             <input name="index_pic3" type="file" class="file_box" />
+          </div>
+		
+    </div>
+    <div class="clear"></div>
+    <div class="text_box">
+  	<label class="label_box" style="width:162px;"><b>首页帖子标题</b>（16字以内）</label>
+    <div class="input_box"><input name="index_pic3_subject" type="text"  value="$_SESSION['index_pic3_subject']"/></div>
+    <div class="clear"></div>
+    </div>
+   <div class="text_box">
+  	<label class="label_box" style="width:162px;"><b>帖子ID</b></label>
+    <div class="input_box"><input name="index_pic3_url" type="text"  value="$_SESSION['index_pic3_url']"/></div>
+    <div class="clear"></div>
+  </div>
+  </div>
+  <div class="clear"></div>
+  
+   
+   
+    <div class="nav_bg nav_top"><b>广告栏</b><span style="color:#717171">（位于热帖内最下端，回复上面。图片大小：640*160，格式只能是gif、jpeg、png）</span></div>
+    <div class="radio_t" style="padding-left:30px;">
+          	 <div class="r_title">开启广告栏<span>（选择"是"开启广告栏，如需关闭请卸载插件或选择"否"关闭首页广告栏）</span></div>
+             <div style="margin-top:5px;">
+                <input id="p3" name="hot_post_pic_status" type="radio" style="border:none;" value="1" {if $_SESSION['hot_post_pic_status']}checked="checked"{/if}/> <label for="p3">是</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input id="p4" name="hot_post_pic_status" type="radio" style="border:none;" value="0" {if !$_SESSION['hot_post_pic_status']}checked="checked"{/if}/> <label for="p4">否</label>　　　　
+             </div>
+         </div> 
+  <div class="banner_box" style="width:340px;margin-left:0px; float:left; padding-left:20px;_height:450px;">
+     <div class="banner_index" style="_margin-right:0px;">
+    	<div class="banner_bg_i">
+		<!--{if $_SESSION['hot_post_pic1']}--><img src="$_SESSION['hot_post_pic1']" width="204" height="34"/><!--{/if}-->
+		</div>
+    </div>
+    <div class="clear"></div>
+    <div class="banner_btn">
+         <div class="up_img" style="margin-top:20px; margin-left:90px; margin-bottom:10px;">
+          	<a href="#" class="a_btn">上传图片</a>
+             <input name="hot_post_pic1" type="file" class="file_box" />
+          </div>
+    </div>
+     <div class="clear"></div>   
+     <div class="text_box" style="margin-top:8px;">
+        <label class="label_box">广告链接</label>
+        <div class="input_box"><input name="hot_post_pic1_url" type="text"  value="$_SESSION['hot_post_pic1_url']"/></div>
+        <div class="clear"></div>
+    </div>
+  </div>
+    <div class="banner_box" style="width:340px; margin-left:0px; float:left;_height:450px;">
+     <div class="banner_index" style="_margin-right:0px;">
+    	<div class="banner_bg_i">
+		<!--{if $_SESSION['hot_post_pic2']}--><img src="$_SESSION['hot_post_pic2']" width="204" height="34"/><!--{/if}-->
+		</div>
+    </div>
+    <div class="clear"></div>
+    <div class="banner_btn">
+         <div class="up_img" style="margin-top:20px; margin-left:90px; margin-bottom:10px;">
+          	<a href="#" class="a_btn">上传图片</a>
+             <input name="hot_post_pic2" type="file" class="file_box" />
+          </div>
+          <div class="text_box" style="margin-top:8px;">
+            <label class="label_box">广告链接</label>
+            <div class="input_box"><input name="hot_post_pic2_url" type="text"  value="$_SESSION['hot_post_pic2_url']"/></div>
+            <div class="clear"></div>
+         </div>
+    </div>
+     <div class="clear"></div>   
+  </div>
+    <div class="banner_box" style="width:340px;margin-left:0px; float:left; _height:450px;">
+     <div class="banner_index" style="_margin-right:0px;">
+    	<div class="banner_bg_i">
+		<!--{if $_SESSION['hot_post_pic3']}--><img src="$_SESSION['hot_post_pic3']" width="204" height="34"/><!--{/if}-->
+		</div>
+    </div>
+    <div class="clear"></div>
+    <div class="banner_btn">
+         <div class="up_img" style="margin-top:20px; margin-left:90px; margin-bottom:0px;">
+          	<a href="#" class="a_btn">上传图片</a>
+             <input name="hot_post_pic3" type="file" class="file_box" />
+          </div>
+    </div>
+     <div class="clear"></div> 
+        <div class="text_box" style="margin-top:8px;">
+            <label class="label_box">广告链接</label>
+            <div class="input_box"><input name="hot_post_pic3_url" type="text"  value="$_SESSION['hot_post_pic3_url']"/></div>
+            <div class="clear"></div>
+    	</div>  
+  </div>
+  <div class="clear"></div>
+    
+   
+  <div class="nav_bg nav_top"><b>隐藏频道</b></div>
+  <div class="m_title"><b>门户</b></div>
+  <div class="cont_box">
+  	 <div class="cont_l">
+     	{$portalselect}
+     </div>
+     <div class="cont_r">
+     	用于隐藏不希望在AppCan手机论坛客户端应用上显示的栏目。门户本身隐藏的栏目不需要再次在这里设置。<br />按住 CTRL 多选
+     </div>
+     <div class="clear"></div>
+  </div>
+  <div class="m_title"><b>论坛</b></div>
+  <div class="cont_box">
+  	 <div class="cont_l">
+     	{$forumselect}
+     </div>
+     <div class="cont_r">
+     	用于隐藏不希望在AppCan手机论坛客户端应用上显示的板块。论坛本身隐藏的板块不需要再次在这里设置。<br />按住 CTRL 多选
+     </div>
+     <div class="clear"></div>
+  </div>
+  
+  <div class="nav_bg nav_top"><b>自定义热帖、新帖、资讯</b></div>
+    <div class="m_title"><b>新帖</b></div>
+  <div class="cont_box">
+  	 <div class="cont_l" style="float:left;margin-right:10px; ">
+     	<textarea name="newest_post" style="background:#fff;" cols="30" rows="10">$_SESSION['newest_post']</textarea>
+     </div>
+     <div class="cont_r">
+     	希望显示在最新主题页的前二十条新帖<br />
+		输入帖子ID，每行一个<br />
+		按住 CTRL 多选
+     </div>
+     <div class="clear"></div>
+  </div>
+  <div class="m_title"><b>热帖</b></div>
+  <div class="cont_box">
+  	 <div class="cont_l" style="float:left;margin-right:10px; ">
+     	<textarea name="host_post" style="background:#fff;" cols="30" rows="10">$_SESSION['host_post']</textarea>
+     </div>
+     <div class="cont_r">
+     	希望显示在热帖列表页的前二十条热帖<br />
+		输入帖子ID，每行一个<br />
+		按住 CTRL 多选
+     </div>
+     <div class="clear"></div>
+  </div>
+    <div class="m_title"><b>资讯</b></div>
+  <div class="cont_box">
+  	 <div class="cont_l" style="float:left;margin-right:10px; ">
+     	<textarea style="background:#fff;" name="article" cols="30" rows="10">$_SESSION['article']</textarea>
+     </div>
+     <div class="cont_r">
+     	希望显示在资讯列表页的前二十条资讯<br />
+		输入文章ID，每行一个<br />
+		按住 CTRL 多选
+     </div>
+     <div class="clear"></div>
+  </div>
+  
+   <div class="line_n"></div>
+  <div class="next_box">
+  <input name="contentsubmit" type="submit" class="next_btn" value="保存"/>
+  <input type="hidden" name="formhash" value="<?php echo FORMHASH;?>" />
+  </div>
+
+</form>
+
+<script>
+var issubmit = false;
+function showwaiting() {
+	if(!issubmit) {
+		$('ajaxwaitid').innerHTML = '<img src="' + IMGDIR + '/loading.gif">';
+		$('emailsubmit').value = "处理中...";
+		issubmit = true;
+		return false;
+	} else {
+		return false;
+	}	
+}
+</script>
+  
+</body>
+</html>

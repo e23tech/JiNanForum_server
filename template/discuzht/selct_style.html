@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>设置色彩风格</title>
+<link href="css/style.css" rel="stylesheet"  type="text/css"/>
+<link rel="stylesheet" href="images/farbtastic.css" type="text/css" />
+<script type="text/javascript" src="images/jquery.js"></script>
+<script type="text/javascript" src="images/farbtastic.js"></script>
+
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function() {
+    //$('#demo').hide();
+    $('#picker').farbtastic(function(color) {
+			$('.img_title').css('background',color);
+			$('.html_b').css('background',color);
+			$('#newest').css('background',color);
+			
+			document.getElementById("customcolorradio").checked=true;
+			document.getElementById("colorrgb").value = color;
+			$("#lblcolorrgb").html(color);
+	});
+	
+  });
+  
+function usesyscolor() {
+	var color = '#216BBF';
+	$('.img_title').css('background',color);
+	$('.html_b1').css('background',color);
+	$('#newest').css('background',color);
+	
+	$("#lblcolorrgb").html(color);
+}
+
+function usecustomcolor() {
+	var color = document.getElementById("colorrgb").value;
+	$('.img_title').css('background',color);
+	$('.html_b1').css('background',color);
+	$('#newest').css('background',color);
+	
+	$("#lblcolorrgb").html(color);
+} 
+  
+</script>
+</head>
+
+<body class="body_bg">
+  <div class="padd">
+        <div class="t-header">
+            <b class="html_b htmer_circle1"></b>
+            <b class="html_b htmer_circle2"></b>
+            <div  class="html_content" >
+                <b style="float:left; display:block; line-height:50px;">AppCan AppCan 手机论坛客户端</b>
+                <div class="title_r">
+                    <a href="#" class="btn1">我要推广</a>
+                    <a href="#" class="btn2">管理应用</a>
+                    <a href="#" class="btn2">推广设置</a>
+                     <a href="#" class="btn2">内容设置</a>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <b class="html_b htmer_circle3 "></b>
+            <b class="html_b htmer_circle4"></b>
+        </div>
+        <div class="clear"></div>
+        <div class="bar_box">
+    		<div class="jd_bar"> </div>
+            <ul class="bar_list">
+                <li>1、风格设置</li>
+                <li class="bar_clo">2、生成应用</li>
+                <div class="clear"></div>
+            </ul>
+            <div class="clear"></div>
+    	</div>
+  </div>
+  <div class="nav_bg"><b>设置风格色彩</b></div>
+  <div class="style_box">	 
+    <div class="mb_content">
+       <div style="float:left; width:325px; margin-top:20px; margin-right:30px;">
+       		
+              <div style=" margin-bottom:40px;_margin-bottom:30px;" >
+                        <input id="systemcolorradio" onclick="usesyscolor()" name="colorradio" type="radio" value="0" checked="checked" class="radio_box"/>
+                        <div class="kj" >
+                            &#31995;&#32479;&#40664;&#35748;&#33394;&#24425;
+                        </div>
+                        <div class="clear"></div>
+               </div>
+              <div>
+                    <input id="customcolorradio" onclick="usecustomcolor()" name="colorradio" type="radio" value="1" class="radio_box"/>
+                    <div class="kj">
+                       &#33258;&#23450;&#20041;&#39118;&#26684;&#33394;&#24425;
+                    </div>
+                    <div class="clear"></div>
+             </div>
+             <div id="picker" style="margin-top:20px;"></div>
+            <div style=" margin-top:10px; height:30px; line-height:30px;">&#39068;&#33394;&#20540; ：<span id="lblcolorrgb">#216BBF</span><input type="hidden" id="colorrgb" name="colorrgb" value="#123456"/></div>
+       </div>
+       <div class="img_style">
+            <div class="dingwei_img">
+       			<div class="img_title">论坛</div>
+                <div class="jianbian"></div>
+                <div class="anniu"></div>
+            </div>
+            <div>
+            		<div class="new_btn">
+                    		<b class="html_b1 htmer_circle11"></b>
+                            <b class="html_b1 htmer_circle21"></b>
+                            <div id="newest" class="html_content1" >&#26368;&#26032;</div>
+                            <b class="html_b1 htmer_circle21"></b>
+                            <b class="html_b1 htmer_circle11"></b>
+					</div>
+            </div>
+       </div>
+       <div class="clear"></div>
+    </div>
+     <div class="line"></div>
+    <div class="next_box"><a href="#" class="next_btn"><b>下一步</b></a></div>
+  </div>
+</body>
+</html>

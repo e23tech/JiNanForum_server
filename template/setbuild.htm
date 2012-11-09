@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="{$_G['siteurl']}/source/plugin/zywx/template/css/style.css" type="text/css" />
+<!--[if IE 6]>  
+<style type="text/css">
+.b_juli { margin-top:40px;}
+</style>
+<![endif]-->
+
+<div class="">
+    <div class="">
+        <div class="t-header">
+           <div  class="html_content" >
+                <b style="float:left; display:block; line-height:50px;">AppCan 手机论坛客户端</b>
+                <div class="title_r">
+                    <a href="{ZYWX_SPREAD}" class="btn1">我要推广</a>
+                    <a href="{$url}&op=applist" class="btn2">管理应用</a>
+                    <a href="{$url}&op=publicity" class="btn2">推广设置</a>
+                    <a href="{$url}&op=setappupgrade" class="btn2">升级设置</a>
+                    <a href="{$url}&op=setcontent" class="btn2">内容设置</a>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+<!--		    <div class="f_right">
+		       <a href="{ZYWX_SPREAD}" class="tg_btn" target="_blank"></a>
+			   <a ></a>
+               <a ></a>
+			   <a href="{ZYWX_APPCAN}/plugin/plugin_app_detail.action?app_key={$appkey}" target="appcontent"></a>
+            </div>-->
+           <!-- <h3>{lang zywx:zywx}</h3>-->
+            <ul class="tab2">
+                <li><a href="{$url}&op=selectstyle"><span style="display:none">{lang zywx:buildsettings}</span></a></li>
+            </ul>
+    	</div>
+	</div>
+
+<!--{if $upgrade}-->
+<div id="boardnews" style=""><table class="tb tb2"><tbody><tr><th class="partition edited">&#24744;&#24403;&#21069;&#20351;&#29992;&#30340;&#25554;&#20214;&#26377;&#26032;&#29256;&#26412;&#65292;&#35831;&#21450;&#26102;&#36827;&#34892;&#21319;&#32423;</th></tr><tr><td class="tipsblock"></td></tr></tbody></table></div>
+<!--{/if}-->
+
+<iframe width="100%" name="appcontent"  height="1500" frameborder="no" border="0"  scrolling="no" src="{$iframeurl}?app_key={$appkey}&pluginName=discuz&pluginVersion={$plugin['version']}"></iframe>

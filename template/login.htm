@@ -1,0 +1,9 @@
+<script>
+function getinfo(data) {
+	if(data.msg) {
+		alert(data.msg);
+	}
+	parent.parent.parent.window.location.href='$url&op=login&email='+data.zywxemail;
+}
+</script>
+<script type="text/javascript" src='{ZYWX_PROXY}/index.php?m=curl&callback=getinfo&a=loginReport&domain={eval echo urlencode($_G["siteurl"]);}&authcode={$_G['setting']['zywxid']}'></script>

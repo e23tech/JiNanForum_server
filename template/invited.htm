@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="{$_G['siteurl']}/source/plugin/zywx/template/css/style.css" type="text/css" />
+
+<div class="container1">
+    <div class="t-header">
+             <div class="html_content">
+                 <b style="float:left; display:block; line-height:50px;">AppCan&#25163;&#26426;&#35770;&#22363;&#23458;&#25143;&#31471;</b>
+                  <div class="title_r">
+                  <a href="{ZYWX_SPREAD}"  target="_blank"></a>
+				  <a href="{$url}&op=setbuild&url={ZYWX_APPCAN}/plugin/plugin_app_detail.action" class="btn2">{lang zywx:appmanagement}</a>
+                  <a href="{$url}&op=publicity" class="btn2">{lang zywx:publicity}</a>
+				  <a href="{$url}&op=invite" class="btn2">&#36992;&#35831;&#31649;&#29702;</a>
+				  <a href="{$url}&op=setcontent" class="btn2">{lang zywx:contentsettings}</a>
+                  
+                  </div>
+                  <div class="clear"></div>
+             </div>
+    </div>
+	
+     <div class="nav_bg" style="margin:0px 30px 0px 10px;"><b>&#36992;&#35831;&#31649;&#29702;</b> </div>
+	
+    <div class="mb_content" style="width:400px; margin-left:30px;display:none" >
+		<form action="$url" method="post" id="forinvite">
+        <div style="height:25px;float:left; line-height:25px; margin-bottom:5px;font-weight: bold;color:#000;">&#36992;&#35831;&#24744;&#30340;&#31449;&#28857;&#65306;</div>
+        <span style="float:left; display:block; line-height:30px; padding-left:20px;">http://</span>
+        
+	    <div class="input_left" style="padding-left:0px;">
+           <div class="jia_input_box">
+		   <input name="domainName" type="text" value="{$shorturl}" onfocus="if(value =='{$shorturl}'){value =''}" onblur="if (value ==''){value='{$shorturl}'}"/></div>
+		   <input type="hidden" name="formhash" value="{FORMHASH}" />
+        </div>
+        <div class="input_right">
+        	<input name="invitesubmit" type="submit"  value="&#25552;&#20132;"/>
+        </div>
+		</form>
+        <div class="clear"></div>
+        <div class="yx_check_a">
+&#27880;&#65306;&#35813;&#22320;&#22336;&#20026;&#25552;&#20379;&#32473;&#24744;&#25554;&#20214;&#21253;&#30340;&#35770;&#22363;&#22320;&#22336;</div>
+    </div>
+    <div class="mb_content" style=" width:400px; margin-left:30px; margin-top:10px; margin-bottom:10px;display:block" >
+		
+        <div style="height:25px;float:left; line-height:25px; margin-bottom:5px;font-weight: bold; color:#000;">&#36992;&#35831;&#24744;&#30340;&#31449;&#28857;&#65306;</div>
+        <span style="float:left; display:block; line-height:30px; padding-left:20px; color:#000"><b>$inviteurl</b></span>
+        <div class="clear"></div>
+        <div class="yx_check_a">
+&#27880;&#65306;&#35813;&#22320;&#22336;&#20026;&#25552;&#20379;&#32473;&#24744;&#25554;&#20214;&#21253;&#30340;&#35770;&#22363;&#22320;&#22336;</div>
+    </div>
+
+
+</div>
+<div class="clear"></div>
+<style type="text/css">
+.clipinner {position:relative; color:#0000FF}
+.clipboardswf {position:absolute; left:0; top:0;}
+</style> 
+<script language="javascript">
+var setcopy_gettext = function(){
+    window.document.clipboardswf.SetVariable('str', '{$shorturl}');
+}
+</script>
+ 
+<iframe width="100%" name="appcontent"  height="600" frameborder="no" border="0"  scrolling="no" src="{ZYWX_APPCAN}/plugin/inviteList.action?app_key={$_G['setting']['zywxappkey']}"></iframe>
+
+</body>
+</html>

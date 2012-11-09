@@ -1,0 +1,63 @@
+   <div id="ads" style="margin:auto; display:none; width:100%; top:0px; height:0px; background-color:#fafafa; position:relative; overflow:hidden; text-align:center;">
+		<a href="plugin.php?id=zywx:propagate" target="_blank">
+        <img src="source/plugin/zywx/propagate/images/indextop.gif" width="100%"  alt="" /></a><div id="close" style="position:absolute; right:50px; bottom:20px; cursor:hand;" >
+ <img src='close.gif' onClick='javascript:document.getElementById("ads").style.display = "none";document.getElementById("close").style.display = "none"' width='100' height='14' border='0' vspace='3' alt='close'></div>
+    </div>
+
+<script type="text/javascript" language="javascript">
+    var time = 500;
+    var h = 0;
+    function addCount()
+    {
+        if(time>0)
+        {
+            time--;
+            h = h+5;
+        }
+        else
+        {
+            return;
+        }
+        if(h>=300)
+        {
+            return;
+        }
+        document.getElementById("ads").style.display = "";
+        document.getElementById("ads").style.height = h+"px";
+        setTimeout("addCount()",30);
+    }
+	
+	if(!getcookie('pollscreened')) {
+		addCount();
+	    setTimeout("noneAds()",3000);
+		setcookie('pollscreened', 1);
+	} else {
+		document.getElementById("zyindextopad").style.display = "";
+	}
+    
+	
+    </script>
+    <script type="text/javascript" language="javascript">
+    var T = 300;
+    var N = 300;
+    function noneAds()
+    {
+        if(T>0)
+        {
+            T--;
+            N = N-5;
+        }
+        else
+        {
+            return;
+        }
+        if(N<=100)
+        {
+       		document.getElementById("ads").style.display = "none";
+			document.getElementById("zyindextopad").style.display = "";
+            return;
+        }
+        document.getElementById("ads").style.height = N+"px";
+        setTimeout("noneAds()",30);
+    }
+    </script>
